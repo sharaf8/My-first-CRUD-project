@@ -1,0 +1,20 @@
+version: '3'
+services:
+  postgersql:
+    image: postgres
+    container_name: lesson
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGERSS-HOST = localhost
+      - POSTGRESS-USER = leson
+      - POSTGRESS-PASSWORD = lesson
+      - POSTGRESS-DATABASE = lesson
+    command: postgress
+    restart: always
+
+  redis:
+    image: redis
+    container_name: redis-lesson
+    ports:
+      - "6379-6379"
